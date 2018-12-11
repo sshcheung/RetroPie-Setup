@@ -262,6 +262,9 @@ function get_platform() {
             Vero4K)
                 __platform="vero4k"
                 ;;
+            Vero4KPlus)
+                __platform="vero4k"
+                ;;
             "Allwinner sun8i Family")
                 __platform="armv7-mali"
                 ;;
