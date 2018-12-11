@@ -205,11 +205,13 @@ function getDepends() {
 
         # workaround for different package names on osmc / xbian
         if [[ "$required" == "libraspberrypi-bin" ]]; then
-            isPlatform "osmc" && required="rbp-userland-osmc"
+            isPlatform "osmc" && isPlatform "rpi" && required="rbp-userland-osmc"
+            isPlatform "osmc" && isPlatform "vero4k" && required="vero3-userland-osmc"
             isPlatform "xbian" && required="xbian-package-firmware"
         fi
         if [[ "$required" == "libraspberrypi-dev" ]]; then
-            isPlatform "osmc" && required="rbp-userland-dev-osmc"
+            isPlatform "osmc" && isPlatform "rpi" && required="rbp-userland-dev-osmc"
+            isPlatform "osmc" && isPlatform "vero4k" && required="vero3-userland-dev-osmc"
             isPlatform "xbian" && required="xbian-package-firmware"
         fi
 
